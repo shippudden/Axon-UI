@@ -173,7 +173,8 @@ export function IntermediateLoader ({
     dotColor = 'var(--text-primary-black)', // Default dot color
     className = ''
   }) {
-    <div 
+    return (
+      <div 
       className={`${styles.textLoader} ${className}`}
       role='status'
       aria-label='Loading'
@@ -186,6 +187,7 @@ export function IntermediateLoader ({
         <div className={styles.dot} style={{ backgroundColor: dotColor }} />
       </div>
     </div>
+    )
   };
 
 TextLoader.propTypes = {
